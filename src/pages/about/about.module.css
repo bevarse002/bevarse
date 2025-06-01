@@ -1,0 +1,189 @@
+.aboutMain {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f8fafc 0%, #f3f4f6 100%);
+  font-family: serif;
+  padding-bottom: 3rem;
+  animation: fadeIn 1s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none;}
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+  animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  font-family: serif;
+  animation: fadeIn 1.4s cubic-bezier(.4,0,.2,1);
+}
+
+.subtitle {
+  font-size: 1.35rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  font-family: serif;
+  animation: fadeIn 1.6s cubic-bezier(.4,0,.2,1);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.07);
+  padding: 2.2rem 2rem 1.7rem 2rem;
+  min-width: 270px;
+  max-width: 340px;
+  flex: 1 1 300px;
+  transition: transform 0.28s cubic-bezier(.4,0,.2,1), box-shadow 0.28s;
+  animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.13);
+}
+
+.heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+  font-family: serif;
+}
+
+.card p, .card ul {
+  color: #444;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-family: serif;
+}
+
+.card ul {
+  padding-left: 1.2em;
+  margin-top: 0.7em;
+}
+
+.card li {
+  margin-bottom: 0.5em;
+}
+
+.aboutMe {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+.developerInfo {
+  display: flex;
+  align-items: center;
+}
+
+.developerImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 2rem;
+}
+
+.developerText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.aboutMeFull {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: linear-gradient(120deg, #f8fafc 0%, #f3f4f6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.portraitFrame {
+  background: #fff;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 48px 0 rgba(0,0,0,0.12), 0 2px 16px 0 rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 640px;
+  margin: 4rem auto 2rem auto;
+  position: relative;
+}
+
+.portraitImage {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.13);
+  border: 10px solid #f3f4f6;
+  background: #eee;
+  margin-bottom: 2rem;
+}
+
+.portraitCaption {
+  text-align: center;
+  color: #222;
+  font-size: 1.2rem;
+  font-family: serif;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .hero {
+    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+  .aboutMeFull {
+    min-height: 40vh;
+    padding: 0 0.5rem;
+  }
+  .portraitFrame {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .portraitImage {
+    max-width: 98vw;
+    border-width: 5px;
+  }
+}

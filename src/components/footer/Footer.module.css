@@ -1,0 +1,266 @@
+.footer {
+  background: linear-gradient(120deg, #f8fafc 0%, #f3f4f6 100%);
+  border-top: 1px solid #e5e7eb;
+  padding: 4rem 0 2rem 0;
+  font-family: serif;
+  color: #222;
+  margin-top: 4rem;
+  box-shadow: 0 -2px 24px 0 rgba(0,0,0,0.03);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 3.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 2.5rem;
+}
+
+.brandSection {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.2rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.04));
+}
+
+.tagline {
+  font-size: 1.18rem;
+  color: #555;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.newsletter {
+  width: 100%;
+}
+
+.newsletterLabel {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+.newsletterInputWrap {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: 1rem;
+  font-family: serif;
+  background: #fafafa;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.newsletterInput:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px #e0e7ef;
+}
+
+.newsletterButton {
+  padding: 0 1.2rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1rem;
+  font-family: serif;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.newsletterButton:hover {
+  background: #222;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.payments {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.payments img {
+  height: 2em;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.payments img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.sections {
+  flex: 3 1 700px;
+  display: flex;
+  gap: 3.5rem;
+  justify-content: flex-end;
+}
+
+.sections > div {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding-right: 2rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sections > div:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.04em;
+  color: #111;
+  text-align: center; /* Center heading text */
+  width: 100%;
+}
+
+.link {
+  display: block;
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.2s;
+  padding: 0 0 2px 0;
+  text-align: center; /* Center link text */
+  width: 100%;
+}
+
+.link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #111;
+  border-radius: 0;
+  transform: scaleX(0);
+  transition: transform 0.22s cubic-bezier(.4,0,.2,1);
+  transform-origin: center;
+  translate: -50% 0;
+}
+
+.link:hover {
+  color: #111;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.socials {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.socialIcon img {
+  width: 2.2em;
+  height: 2.2em;
+  filter: none;
+  opacity: 0.92;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.3em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: 
+    opacity 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.socialIcon:hover img {
+  opacity: 1;
+  background: #111;
+  filter: invert(1);
+  transform: scale(1.15);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 1.05rem;
+  color: #888;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.legalLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;           /* More gap between links */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;     /* Prevent wrapping to next line */
+  white-space: nowrap;   /* Prevent text from wrapping */
+}
+
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .sections {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .legalLinks {
+    gap: 1.2rem;         /* Slightly less gap on small screens */
+  }
+}

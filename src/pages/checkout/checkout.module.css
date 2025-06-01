@@ -1,0 +1,197 @@
+.checkoutPage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  max-width: 1100px;
+  margin: 60px auto 80px auto;
+  background: linear-gradient(135deg, #fff 70%, #f7f7fa 100%);
+  border-radius: 32px;
+  box-shadow: 0 8px 48px rgba(24,24,24,0.10), 0 1.5px 8px rgba(24,24,24,0.04);
+  padding: 3.5rem 3rem 3rem 3rem;
+  align-items: flex-start;
+}
+
+.summarySection {
+  flex: 1 1 340px;
+  min-width: 320px;
+  background: #fafbfc;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(24,24,24,0.06);
+  padding: 2rem 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #181818;
+  font-family: 'Playfair Display', serif;
+}
+
+.cartList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 1.2rem;
+}
+
+.cartImage {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f4f4f7;
+  border: 1px solid #ececec;
+}
+
+.cartName {
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: #222;
+}
+
+.cartDetails {
+  font-size: 0.98rem;
+  color: #666;
+  margin-top: 0.2rem;
+  display: flex;
+  gap: 0.7em;
+}
+
+.cartPrice {
+  margin-left: auto;
+  font-weight: 700;
+  color: #181818;
+  font-size: 1.08rem;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin-top: 1.7rem;
+  color: #181818;
+}
+
+.totalPrice {
+  color: #181818;
+}
+
+.formSection {
+  flex: 2 1 400px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(24,24,24,0.06);
+  padding: 2.5rem 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.formSection label {
+  font-weight: 700;
+  color: #181818;
+  font-size: 1.08rem;
+}
+
+.formSection input {
+  padding: 0.6em 1em;
+  border: 1.5px solid #d6d6e7;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  background: #f9f9fc;
+  font-family: inherit;
+  transition: border 0.18s;
+}
+
+.formSection input:focus {
+  border-color: #181818;
+  outline: none;
+}
+
+.checkoutButton {
+  background: linear-gradient(90deg, #181818 60%, #3a3a3a 100%);
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 16px 56px;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 6px 32px rgba(24,24,24,0.13);
+  cursor: pointer;
+  margin-top: 1.2rem;
+  letter-spacing: 0.03em;
+  transition: background 0.22s, box-shadow 0.22s, transform 0.18s;
+  font-family: 'Inter', sans-serif;
+}
+.checkoutButton:hover {
+  background: linear-gradient(90deg, #222 60%, #444 100%);
+  box-shadow: 0 12px 48px rgba(24,24,24,0.18);
+  transform: scale(1.045);
+}
+
+.stepsRow {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+.step, .activeStep {
+  font-weight: 600;
+  color: #888;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  background: #f4f4f7;
+}
+.activeStep {
+  background: #ffd600;
+  color: #181818;
+}
+.reviewBox {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+}
+.formActions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .checkoutPage {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  .summarySection,
+  .formSection {
+    min-width: 0;
+    width: 100%;
+  }
+}

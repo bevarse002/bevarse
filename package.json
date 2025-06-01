@@ -1,0 +1,37 @@
+{
+  "name": "bevarse",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
+    "@tailwindcss/postcss": "^4.1.7",
+    "clsx": "^2.1.1",
+    "firebase": "",
+    "framer-motion": "^12.12.2",
+    "next": "",
+    "react": "",
+    "react-dom": "",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "swiper": "",
+    "tailwindcss": "",
+    "typescript": ""
+  },
+  "devDependencies": {
+    "@types/node": "",
+    "@types/react": "",
+    "@types/react-dom": "",
+    "@types/react-slick": "^0.23.13",
+    "autoprefixer": "",
+    "eslint": "",
+    "eslint-config-next": "",
+    "postcss": "",
+    "postcss-loader": ""
+  }
+}

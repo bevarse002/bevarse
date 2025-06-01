@@ -1,0 +1,238 @@
+.contactMain {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f8fafc 0%, #f3f4f6 100%);
+  font-family: serif;
+  padding-bottom: 3rem;
+  animation: fadeIn 1s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none;}
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+  animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  font-family: serif;
+  animation: fadeIn 1.4s cubic-bezier(.4,0,.2,1);
+}
+
+.subtitle {
+  font-size: 1.35rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  font-family: serif;
+  animation: fadeIn 1.6s cubic-bezier(.4,0,.2,1);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 1rem 0 1rem;
+  position: relative;
+}
+
+.card {
+  background: linear-gradient(120deg, #fff 60%, #f8fafc 100%);
+  border-radius: 1.7rem;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.09);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 270px;
+  max-width: 370px;
+  flex: 1 1 320px;
+  border: 1.5px solid #e5e7eb;
+  transition: 
+    transform 0.28s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.28s,
+    border 0.28s,
+    background 0.28s;
+  animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.035);
+  box-shadow: 0 12px 48px 0 rgba(0,0,0,0.13);
+  border: 1.5px solid #cbd5e1;
+  background: linear-gradient(120deg, #f8fafc 60%, #fff 100%);
+}
+
+.heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.01em;
+  font-family: serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.heading::before {
+  content: "💬";
+  font-size: 1.3em;
+  display: inline-block;
+  margin-right: 0.3em;
+  opacity: 0.8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.input, .textarea {
+  width: 100%;
+  max-width: 320px;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1.1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.8rem;
+  font-size: 1.08rem;
+  font-family: serif;
+  background: #f9fafb;
+  transition: border 0.22s, box-shadow 0.22s, background 0.22s;
+  margin-bottom: 0.2rem;
+}
+
+.input:focus, .textarea:focus {
+  border-color: #111;
+  outline: none;
+  box-shadow: 0 0 0 2px #e0e7ef;
+  background: #fff;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.button {
+  width: 100%;
+  max-width: 320px;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(90deg, #111 60%, #444 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.13rem;
+  font-weight: 700;
+  font-family: serif;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
+  margin-top: 0.5rem;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #222 60%, #111 100%);
+  transform: translateY(-2px) scale(1.045);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+}
+
+.form input:not(:last-child),
+.form textarea:not(:last-child) {
+  border-bottom: 1.5px solid #f1f5f9;
+}
+
+.success {
+  margin-top: 1rem;
+  color: #1a7f37;
+  background: #e6fbe8;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  animation: fadeIn 0.5s;
+  box-shadow: 0 2px 8px 0 rgba(26,127,55,0.07);
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2em 0;
+}
+
+.infoList li {
+  margin-bottom: 0.7em;
+  font-size: 1.08rem;
+}
+
+.infoList a {
+  color: #111;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.infoList a:hover {
+  color: #444;
+}
+
+.infoNote {
+  color: #888;
+  font-size: 0.98rem;
+  margin-top: 1.2em;
+}
+
+/* Divider between cards on desktop */
+@media (min-width: 900px) {
+  .content::before {
+    content: "";
+    display: block;
+    width: 2px;
+    background: linear-gradient(to bottom, #e5e7eb 10%, #fff 90%);
+    position: absolute;
+    left: 50%;
+    top: 2.5rem;
+    bottom: 2.5rem;
+    z-index: 0;
+    border-radius: 1px;
+  }
+  .card {
+    z-index: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .hero {
+    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+  .content::before {
+    display: none;
+  }
+}

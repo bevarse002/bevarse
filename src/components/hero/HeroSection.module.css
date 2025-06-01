@@ -1,0 +1,141 @@
+.heroSection {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  gap: 0;
+}
+
+@media (min-width: 900px) {
+  .heroContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0 2rem;
+  }
+}
+
+.heroLeft {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;      /* Center content horizontally */
+  min-width: 0;
+  max-width: 700px;
+  padding-left: 2rem;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  white-space: pre-line;
+}
+
+.heroSubtitle {
+  font-size: 2rem;
+  color: #555;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.heroRegister {
+  font-size: 1.5rem;        /* Make it bigger */
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;     /* Add space above */
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.heroRegister::before,
+.heroRegister::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: #111;
+  border-radius: 0;
+  transform: scaleX(0);
+  transition: transform 0.2s cubic-bezier(.4,0,.2,1);
+  transform-origin: center;
+  translate: -50% 0;
+  pointer-events: none;
+}
+
+.heroRegister::before {
+  top: -2px; /* Position the top underline */
+}
+
+.heroRegister::after {
+  bottom: -2px; /* Position the bottom underline */
+}
+
+.heroRegister:hover::before,
+.heroRegister:hover::after {
+  transform: scaleX(1);
+}
+
+.heroRight {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.heroImg {
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 0;
+  display: block;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .heroImg {
+    height: 40vw;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+}

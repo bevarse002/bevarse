@@ -1,0 +1,158 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center; /* <-- Change from flex-start to flex-end */
+  justify-content: space-between;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: flex-end;   /* <-- Change from flex-start to flex-end */
+  margin-left: 6rem; /* Increased from 2.5rem to 4rem */
+  margin-top: 0;           /* <-- Remove top margin for perfect alignment */
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.01em;
+  line-height: 1;
+
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #222;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 0.2rem;
+  letter-spacing: 0.1em;
+}
+
+.navLinks {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.2rem;
+  margin-right: 3.5rem;
+  margin-top: 2.5rem;
+}
+
+.navLink {
+  position: relative;
+  display: inline-block;
+  color: #222;
+  font-family: serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.navLink::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;                  /* Sharp, thin underline */
+  background: #111;
+  border-radius: 0;
+  transform: scaleX(0);
+  transition: transform 0.2s cubic-bezier(.4,0,.2,1);
+  transform-origin: center;      /* Animation starts from the center */
+  translate: -50% 0;            /* Center the underline */
+  pointer-events: none;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.symbol {
+  position: absolute;
+  left: 50%;
+  top: -1.8em; /* Increase negative value to move higher */
+  transform: translateX(-50%) translateY(0) scale(1.3);
+  opacity: 0;
+  width: 1.5em;
+  height: 1.5em;
+  color: #000;
+  pointer-events: none;
+  transition:
+    opacity 0.22s cubic-bezier(.4,0,.2,1),
+    transform 0.22s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+  filter: brightness(0) saturate(100%); /* ensures SVG is pure black if it's black by default */
+}
+
+/* Show icon if link is hovered OR active */
+.navLink:hover .symbol,
+.active .symbol {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px) scale(1.3);
+}
+
+.logoImg {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+    padding: 0.5rem 1rem;
+  }
+  .navLinks {
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .logoImg {
+    height: 48px;
+  }
+}
+
+/* Add these styles to your Navbar.module.css */
+.active {
+  /* Example: */
+  color: #000000;
+  font-weight: bold;
+}
+
+.cartNavWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -1.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #181818;
+  color: #fff;
+  border-radius: 1em;
+  padding: 0.1em 0.7em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  pointer-events: none;
+  letter-spacing: 0.01em;
+}
+
