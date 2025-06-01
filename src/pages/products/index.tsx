@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Products.module.css';
 import Link from 'next/link';
 import { products } from '../../data/products';
-import { useCart } from '../cart/CartContext';
+import { useCart } from '../../components/cart/CartContext';
 import { useToast } from '../../components/toast/ToastContext';
 import { useWishlist } from '../../components/wishlist/WishlistContext';
 

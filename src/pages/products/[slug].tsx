@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { products } from '../../data/products';
 import { menProducts } from '@/data/menProducts';
 import { womenProducts } from '@/data/womenProducts';
-import { useCart } from '../cart/CartContext';
+import { useCart } from '../../components/cart/CartContext';
 import { useToast } from '../../components/toast/ToastContext';
 import { useWishlist } from '../../components/wishlist/WishlistContext'; // adjust path as needed
 import styles from './Products.module.css';

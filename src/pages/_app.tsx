@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import Head from 'next/head';
-import { CartProvider } from './cart/CartContext';
+import { CartProvider } from '../components/cart/CartContext';
 import { ToastProvider } from '../components/toast/ToastContext';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';

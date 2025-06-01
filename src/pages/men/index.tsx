@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Men.module.css';
 import Link from 'next/link';
-import { useCart } from '../cart/CartContext';
+import { useCart } from '../../components/cart/CartContext';
 import { useToast } from '../../components/toast/ToastContext';
 import { menProducts } from '../../data/menProducts';
 import { useWishlist } from '../../components/wishlist/WishlistContext'; // adjust path as needed

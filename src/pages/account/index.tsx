@@ -5,7 +5,7 @@ import styles from './account.module.css';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { supabase } from '../../lib/supabaseClient'; // adjust path if needed
-import { useCart } from '../cart/CartContext'; // adjust the path if needed
+import { useCart } from '../../components/cart/CartContext'; // adjust the path if needed
 
 const Account: React.FC = () => {
   const [mode, setMode] = useState<'signup' | 'signin'>('signup');

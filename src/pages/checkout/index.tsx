@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './checkout.module.css';
-import { useCart } from '../cart/CartContext';
+import { useCart } from '../../components/cart/CartContext';
 import { useToast } from '../../components/toast/ToastContext';
 import { useRouter } from 'next/router';
 
