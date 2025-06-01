@@ -11,6 +11,7 @@ type CartItemProps = {
     size: string | undefined;
     color: string | undefined;
   };
+  
   onRemove: (slug: string) => void;
   onUpdateQuantity: (slug: string, quantity: number) => void;
 };
