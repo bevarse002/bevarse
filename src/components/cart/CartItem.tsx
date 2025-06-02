@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./cart.module.css";
+import styles from "../../pages/cart/cart.module.css";
 
 type CartItemProps = {
   item: {
