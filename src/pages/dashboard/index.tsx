@@ -2,12 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import { supabase } from "../../lib/supabaseClient";
 import Sidebar from "./Sidebar";
-import Overview from "./Overview";
-
 import Wishlist from "./Wishlist";
-
 import Settings from "./Settings";
-
 import styles from "./Dashboard.module.css";
 
 export default function DashboardPage() {
@@ -72,7 +68,6 @@ export default function DashboardPage() {
             Email: {user.email}
           </div>
         )}
-        {active === "overview" && <Overview user={overviewUser} stats={stats} />}
         
         {active === "wishlist" && (
           <Wishlist

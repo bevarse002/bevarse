@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './cart.module.css';
 import { useCart } from '../../components/cart/CartContext';
 import CartItem from '../../components/cart/CartItem';
-import CartSummary from './CartSummary';
+import CartSummary from '../../components/cart/CartSummary';
 
 const TAX_RATE = 0.08;
 
