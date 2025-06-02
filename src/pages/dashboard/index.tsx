@@ -3,12 +3,11 @@ import { useRouter } from 'next/router';
 import { supabase } from "../../lib/supabaseClient";
 import Sidebar from "./Sidebar";
 import Overview from "./Overview";
-import Orders from "./Orders";
+
 import Wishlist from "./Wishlist";
-import Addresses from "./Addresses";
-import Payments from "./Payments";
+
 import Settings from "./Settings";
-import UserAvatar from "./UserAvatar";
+
 import styles from "./Dashboard.module.css";
 
 export default function DashboardPage() {
@@ -65,7 +64,7 @@ export default function DashboardPage() {
       <Sidebar active={active} setActive={setActive} onLogout={handleLogout} />
       <main className={styles.dashboardMain}>
         <div className={styles.dashboardHeader}>
-          <UserAvatar name={user?.name ?? "Guest"} image={(user as any)?.image} />
+          
           <span className={styles.dashboardWelcome}>Welcome, {user?.name || "Guest"}</span>
         </div>
         {user?.email && (
@@ -74,7 +73,7 @@ export default function DashboardPage() {
           </div>
         )}
         {active === "overview" && <Overview user={overviewUser} stats={stats} />}
-        {active === "orders" && <Orders orders={orders} />}
+        
         {active === "wishlist" && (
           <Wishlist
             items={wishlistItems}
@@ -82,21 +81,8 @@ export default function DashboardPage() {
             onRemove={handleRemoveWishlist}
           />
         )}
-        {active === "addresses" && (
-          <Addresses
-            addresses={addresses}
-            onAdd={handleAddAddress}
-            onEdit={handleEditAddress}
-            onRemove={handleRemoveAddress}
-          />
-        )}
-        {active === "payments" && (
-          <Payments
-            cards={cards}
-            onAdd={handleAddCard}
-            onRemove={handleRemoveCard}
-          />
-        )}
+        
+        
         {active === "settings" && (
           <Settings user={user || { name: "Guest" }} onUpdate={handleUpdateUser} />
         )}
