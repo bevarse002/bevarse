@@ -16,6 +16,8 @@ const CartSummary: React.FC<CartSummaryProps> = ({
 }) => {
   const [coupon, setCoupon] = useState("");
   const tax = subtotal * taxRate;
+  const total = (subtotal + tax).toFixed(2);
+
 
   return (
     <div className={styles.cartSummary}>
