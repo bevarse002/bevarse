@@ -2,22 +2,21 @@ import React, { useState } from "react";
 import styles from "./cart.module.css";
 
 type CartSummaryProps = {
-  subtotal: number;
+  subtotal?: number;
   taxRate?: number;
   onApplyCoupon: (code: string) => void;
-  grandTotal: number;
+  grandTotal?: number;
 };
 
 const CartSummary: React.FC<CartSummaryProps> = ({
-  subtotal,
+  subtotal = 0,
   taxRate = 0.08,
   onApplyCoupon,
-  grandTotal,
+  grandTotal = 0,
 }) => {
   const [coupon, setCoupon] = useState("");
   const tax = subtotal * taxRate;
   const total = (subtotal + tax).toFixed(2);
-
 
   return (
     <div className={styles.cartSummary}>
@@ -27,7 +26,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({
         <span>${subtotal.toFixed(2)}</span>
       </div>
       <div className={styles.summaryRow}>
-        <span>Tax (8%)</span>
+        <span>Tax ({(taxRate * 100).toFixed(0)}%)</span>
         <span>${tax.toFixed(2)}</span>
       </div>
       <div className={styles.summaryRowTotal}>
