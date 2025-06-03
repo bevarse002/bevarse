@@ -10,7 +10,6 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import type { User } from '@supabase/supabase-js'; // Add this import
-import { WishlistProvider } from '../components/wishlist/WishlistContext';
 
 
 
@@ -40,7 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <WishlistProvider>
       <CartProvider>
         <ToastProvider>
           <Head>
@@ -54,7 +52,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Footer />
         </ToastProvider>
       </CartProvider>
-    </WishlistProvider>
   );
 }
 
