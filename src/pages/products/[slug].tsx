@@ -5,7 +5,6 @@ import { menProducts } from '@/data/menProducts';
 import { womenProducts } from '@/data/womenProducts';
 import { useCart } from '../../components/cart/CartContext';
 import { useToast } from '../../components/toast/ToastContext';
-import { useWishlist } from '../../components/wishlist/WishlistContext'; // adjust path as needed
 import styles from './Products.module.css';
 
 type Product = {
@@ -26,7 +25,7 @@ const ProductPage: React.FC = () => {
   const { slug } = router.query;
   const { addToCart } = useCart();
   const { showToast } = useToast();
-  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+
 
   // Find product from all sources
   const product = allProducts.find((p) => p.slug === slug);
@@ -133,22 +132,7 @@ const ProductPage: React.FC = () => {
         <div className={styles.buttonRow}>
           <button className={styles.addToCart} onClick={handleAddToCart}>Add to Cart</button>
           <button className={styles.buyButton} onClick={handleBuyNow}>Buy Now</button>
-          <button
-            className={`${styles.addToCart} ${isInWishlist(product.slug) ? styles.wishlisted : ''}`}
-            type="button"
-            onClick={() =>
-              isInWishlist(product.slug)
-                ? removeFromWishlist(product.slug)
-                : addToWishlist({ ...product, id: product.slug })
-            }
-            aria-label={
-              isInWishlist(product.slug)
-                ? 'Remove from wishlist'
-                : 'Add to wishlist'
-            }
-          >
-            {isInWishlist(product.slug) ? '♥' : '♡'}
-          </button>
+         
         </div>
         <div className={styles.estimatedDelivery}>
           Estimated delivery: <span>Jun 8 - Jun 12</span>
